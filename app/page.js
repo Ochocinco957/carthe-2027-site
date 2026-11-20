@@ -273,31 +273,144 @@ const ORGANIZERS = [
   },
 ];
 
-const FAQS = [
-  ["What is CARTHE?",
-   "The Canada–Africa Real Estate, Tourism & Hospitality Exchange — an eight-day delegation convening 100 African professionals with Canadian counterparts and facilitators in Brampton, Ontario, for business networking, technology transfer, project finance and capacity development."],
-  ["Who is it meant for?",
-   "African real estate, tourism and hospitality professionals — developers, brokers, project managers, construction firms, hotel groups and operators — together with the Canadian firms, institutional partners and facilitators who work with them."],
-  ["What are the benefits and transformation I'll experience?",
-   "Direct relationships with Canadian counterparts and facilitators, exposure to building and construction technology you can deploy at home, a working understanding of cross-border project finance pathways, applicable skills from the training sessions, and pre-arranged partner meetings designed to become real commitments."],
-  ["What are the side attractions that make the event memorable?",
-   "Beyond the business sessions, the week includes the Meet the Delegation networking and welcome dinner on Day 1, a business networking dinner on Day 2, parallel sector experiences alongside the certificate courses on Days 3 and 4, and the Recognition & Gala on Day 7 — the informal side of the trip where many of the strongest partnerships actually begin."],
-  ["What categories of attendance are available?",
-   "Three. Delegate — full in-person attendance across the eight days. Exhibitor — present your firm, technology or project to the room, with priority access to structured meetings. Virtual Attendee — join selected sessions remotely and receive delegate communications."],
-  ["Will a certificate be issued for my participation?",
-   "Yes. Delegates who complete the programme receive a certificate of participation in the Exchange."],
-  ["Is there a provision for virtual attendance?",
-   "Yes. Virtual Attendees join selected sessions remotely and receive delegate communications. In-person capacity is limited to 100; virtual access is not."],
-  ["What does the US$5,000 participation fee cover?",
-   "Seven nights twin-sharing hotel accommodation, one Professional Certificate Course and full participation in the CARTHE 2027 programme — including airport transfers, programme transport in the Greater Toronto Area, breakfast, lunches, selected official dinners, the closing gala, business matchmaking and the Canada–Africa Investment & Partnership Dialogue."],
-  ["How do the deposit and balance work?",
-   "A deposit of US$2,050 secures your registration, invitation letter, the full 7-night hotel payment, one certificate course and onboarding. The balance of US$2,950 falls due once you have secured your Canadian visa and completed travel clearance for physical participation. Upgrades change the deposit only: both courses (US$5,500 total, US$2,550 deposit), single occupancy (US$5,750, US$2,800) or both (US$6,250, US$3,300)."],
-  ["What if I cannot get a Canadian visa?",
-   "If you have paid the deposit and are unable to obtain a visa for any reason, you can still take part fully online at no additional virtual-attendance cost — certificate course, capacity sessions, business and investment sessions, the Dialogue, matchmaking and follow-up. Hotel, meals, local transport and airport transfers apply only to participants physically in Canada."],
-  ["Are flights and visa costs included?",
-   "No. Return flights, visa and biometrics fees, immigration consultant fees, medical examinations and personal expenses are not included. If you do not yet have a valid visa, we can introduce you to a licensed Canadian immigration consultant. An invitation letter does not guarantee visa approval; those decisions rest with the Canadian immigration authorities."],
-  ["How do I register for the event?",
-   "You can register in one of three categories. A Delegate attends in person for the full eight days, with access to the business programme, networking sessions and the delegate experience. An Exhibitor presents their firm, technology or project to the room, with priority access to structured meetings. A Virtual Attendee joins selected sessions remotely and receives delegate communications. Choose your category, complete the short form on this page, and our team will get in touch to guide you through the rest of the process."],
+/* FAQs — CARTHE_2027_FAQ_Updated_FINAL.docx (all 43 questions, in the supplied order) */
+const FAQ_GROUPS = [
+  {
+    title: "The event",
+    items: [
+      ["What is CARTHE 2027?",
+       "CARTHE 2027 is the Canada–Africa Real Estate, Tourism & Hospitality Exchange, an eight-day international business, professional and investment exchange designed to connect African and Canadian professionals, entrepreneurs, investors, business leaders, institutions and decision-makers. It focuses on Real Estate, Tourism, Hospitality, business development, investment and project finance, technology and knowledge transfer, professional capacity development, business matchmaking and international partnerships. CARTHE is built around five key objectives: LEARN • CONNECT • EXPLORE • PARTNER • INVEST."],
+      ["When will CARTHE 2027 take place?",
+       "CARTHE 2027 will take place from Thursday, 3 June to Thursday, 10 June 2027. The programme will run for 8 days and 7 nights."],
+      ["Where will CARTHE 2027 take place?",
+       "The programme will take place in Ontario, Canada, with major activities expected within the Greater Toronto Area, Brampton and Niagara region, subject to final institutional and venue confirmations."],
+      ["Who should attend CARTHE 2027?",
+       "CARTHE is designed for real estate developers, property investors, project owners, project managers, architects, engineers, consultants, construction professionals, hotel owners and operators, tourism entrepreneurs, hospitality professionals, resort developers, destination managers, tourism investors, entrepreneurs, CEOs, business executives, investors, financial professionals, government and institutional representatives, professional service providers, diaspora business leaders and project sponsors."],
+      ["What will participants gain from CARTHE 2027?",
+       "Participants will have opportunities to receive professional capacity development, participate in a Canadian professional certificate course, understand Canadian business practices, explore international investment opportunities, meet Canadian companies and professionals, participate in structured B2B matchmaking, present investment-ready projects, explore technology and knowledge-transfer opportunities, meet potential investors and strategic partners, learn about cross-border partnerships and develop post-CARTHE action plans."],
+    ],
+  },
+  {
+    title: "Fees & what is included",
+    items: [
+      ["What is the participation fee?",
+       "The standard CARTHE 2027 participation fee is US$5,000 per participant. This applies to the standard twin-sharing accommodation package with one professional certificate course."],
+      ["What does the US$5,000 standard package include?",
+       "The standard package includes CARTHE 2027 registration, official invitation letter, participant onboarding and administrative support, seven nights’ twin-sharing hotel accommodation, one professional certificate course, airport pickup and departure transfer, transportation for scheduled CARTHE activities, hotel breakfast subject to hotel arrangements, tea/coffee breaks, lunch during scheduled programme activities, welcome activities, selected official dinners, CARTHE Gala, professional development sessions, business networking, structured B2B matchmaking, Investment & Partnership Dialogue, technology and industry exposure, market-immersion activities, programme materials and post-CARTHE business follow-up."],
+      ["Are international flight tickets included?",
+       "No. Participants are responsible for purchasing their own international flight tickets to and from Canada."],
+      ["Are Canadian visa fees included?",
+       "No. Visa and immigration-related costs are not included in the participation fee. These may include visa application fees, biometrics, medical examination costs, immigration-consultant fees and other immigration-related expenses. Participants who require professional immigration assistance may be introduced to an appropriately licensed Canadian immigration consultant. CARTHE does not guarantee visa approval."],
+    ],
+  },
+  {
+    title: "Certificate courses",
+    items: [
+      ["What professional certificate courses are available?",
+       "Participants may choose from two professional certificate courses: (1) Real Estate Risk Management and International Investment; and (2) Tourism, Hospitality and Blue Economy."],
+      ["What does the Real Estate course cover?",
+       "The proposed areas include real estate as an investment asset, investment-risk identification, financial analysis, due diligence, development and market risk, investment protection, real estate financing, risk mitigation, international real estate investment, and portfolio and exit strategies."],
+      ["What does the Tourism, Hospitality and Blue Economy course cover?",
+       "The proposed areas include tourism and hospitality business models, destination development, hospitality economics, tourism value chains, visitor experience, sustainable tourism, Blue Economy opportunities, tourism and hospitality investment, and development of commercially viable tourism projects."],
+      ["Is one certificate course included in the participation fee?",
+       "Yes. One professional certificate course is included in the standard US$5,000 participation package."],
+      ["Can I attend both certificate courses?",
+       "Yes. Participants who wish to attend both certificate courses may do so by paying an additional US$500."],
+      ["When will the certificate courses take place?",
+       "The current programme schedule is: Saturday, 5 June 2027 — Real Estate Risk Management and International Investment; Sunday, 6 June 2027 — Tourism, Hospitality and Blue Economy. Final academic arrangements remain subject to confirmation with the selected institutional partners."],
+      ["Will participants receive certificates?",
+       "The intention is for participants who successfully complete the applicable requirements of their selected course to receive an appropriate Certificate of Completion or institution-approved certificate. Final certificate wording, assessment requirements and issuing institution will depend on the academic partner ultimately confirmed for each course."],
+    ],
+  },
+  {
+    title: "Accommodation & package options",
+    items: [
+      ["What accommodation arrangement is included?",
+       "The standard package includes 7 nights’ twin-sharing hotel accommodation, meaning two participants will share one hotel room."],
+      ["Can I request a single room?",
+       "Yes. Single occupancy is available as an optional upgrade, subject to hotel availability. The current single-occupancy upgrade is an additional US$750."],
+      ["What are the available package options?",
+       "Twin Sharing + One Course: US$5,000 total; US$2,050 deposit; US$2,950 balance. Twin Sharing + Both Courses: US$5,500 total; US$2,550 deposit; US$2,950 balance. Single Occupancy + One Course: US$5,750 total; US$2,800 deposit; US$2,950 balance. Single Occupancy + Both Courses: US$6,250 total; US$3,300 deposit; US$2,950 balance."],
+    ],
+  },
+  {
+    title: "Deposit, balance & visas",
+    items: [
+      ["What does the deposit cover?",
+       "The deposit secures the participant’s place and supports registration, official invitation letter, programme administration, participant onboarding, seven nights’ accommodation arrangement, selected certificate course(s), and initial programme planning and processing."],
+      ["When is the balance payable?",
+       "The outstanding balance of US$2,950 becomes due immediately once the participant’s Canadian visa has been secured and the necessary travel clearance for physical participation has been completed."],
+      ["What happens if I pay the deposit but my Canadian visa is not approved?",
+       "A participant who has paid the applicable deposit but is unable to obtain a Canadian visa will not lose access to CARTHE 2027. The participant will automatically transition to full virtual participation at no additional virtual-attendance fee."],
+      ["What benefits will a visa-affected participant receive virtually?",
+       "Subject to what can reasonably be delivered online, virtual participants will be entitled to relevant CARTHE benefits including professional certificate-course participation, capacity-development sessions, Investment & Partnership Dialogue, business matchmaking, networking opportunities, programme materials, certificate eligibility subject to course requirements, relevant digital access and post-CARTHE follow-up. Physical services such as accommodation, meals and local transportation apply only to participants physically present in Canada."],
+      ["Can a participant defer to the next CARTHE edition if the visa is refused?",
+       "The current CARTHE policy is that visa-affected registered participants will participate virtually in CARTHE 2027 rather than automatically defer their participation to a future edition."],
+    ],
+  },
+  {
+    title: "Logistics",
+    items: [
+      ["Will CARTHE arrange airport pickup?",
+       "Yes. Scheduled airport reception and transfer arrangements will be provided for arriving participants in accordance with the official programme arrangements. Departure airport transfers will also be provided."],
+      ["Is local transportation included?",
+       "Yes. Transportation required for scheduled official CARTHE activities is included. Personal or private transportation outside the official programme is not included."],
+      ["Are meals included?",
+       "The package includes meals and hospitality associated with the official programme, which may include hotel breakfast according to the hotel arrangement, tea and coffee breaks, lunch during official programme sessions, welcome activities, selected official dinners and the CARTHE Gala. Personal meals outside official programme arrangements are the participant’s responsibility."],
+    ],
+  },
+  {
+    title: "Programme",
+    items: [
+      ["What happens on Day 1?",
+       "Thursday, 3 June 2027 is dedicated to participant arrivals, airport reception, hotel check-in, registration, delegate orientation, official welcome, Meet-the-Delegation networking and welcome dinner."],
+      ["What happens on Day 2?",
+       "Friday, 4 June 2027 will focus on Canadian business exposure and professional development, including Doing Business in Canada, technology transfer, Canadian case studies, cross-border project finance, sector roundtables, structured networking and business networking activities."],
+      ["What happens on Days 5–7?",
+       "Day 5 — Monday, 7 June: advanced capacity development, international partnership structuring, investment readiness, Africa Opportunity Clinic, cross-border negotiation and B2B Matchmaking Round 1. Day 6 — Tuesday, 8 June: Canada–Africa Investment & Partnership Dialogue, project finance discussions, Canadian Technology & Solutions Showcase, Africa Project Showcase, investment panels, Deal Rooms, B2B Round 2 and Expressions of Interest. Day 7 — Wednesday, 9 June: deal progression, B2B / Deal Rooms Round 3, partnership discussions, Documentation Clinic, LOI/MoU guidance, 30/60/90-day action planning, closing activities, recognition and CARTHE Gala."],
+    ],
+  },
+  {
+    title: "Matchmaking & networking",
+    items: [
+      ["What is business matchmaking?",
+       "Business matchmaking is a structured process designed to connect participants with Canadian organisations, businesses and professionals whose interests align with their own. Before CARTHE, participants may be asked to provide their business profile, project information, sector, partnership requirements, investment needs, technology needs, market-entry objectives and preferred Canadian counterpart."],
+      ["Does CARTHE guarantee investors or funding?",
+       "No. Participation in CARTHE does not guarantee funding, investment, financing, partnership or any particular commercial transaction. CARTHE creates a structured platform for introductions, discussions, project presentation, due diligence, partnership exploration and deal progression. Any eventual transaction remains subject to the independent decisions and requirements of the parties involved."],
+      ["Can participants present their projects to investors or partners?",
+       "Potentially, yes. Selected investment-ready projects and business opportunities may be invited to participate in structured project presentations, the Africa Project Showcase, Investment & Partnership Dialogue or Deal Rooms. Projects may be required to demonstrate sufficient readiness and provide appropriate documentation in advance."],
+      ["What type of Canadian organisations are expected to participate?",
+       "CARTHE is engaging organisations across business associations, real estate and development, construction, technology and innovation, tourism and hospitality, development finance, project finance, trade, economic development, professional services, legal and transaction advisory, and academic and professional education. Participation by individual institutions remains subject to confirmation."],
+      ["Will there be networking opportunities?",
+       "Yes. Networking is one of CARTHE’s central objectives. The programme includes welcome networking, business networking, sector roundtables, structured B2B meetings, Deal Rooms, industry engagement, Investment Dialogue, Gala networking and post-programme follow-up."],
+    ],
+  },
+  {
+    title: "About CARTHE",
+    items: [
+      ["Is CARTHE only for Nigerians?",
+       "No. CARTHE is designed as a Canada–Africa exchange platform and may accommodate eligible participants from different African countries as well as diaspora and international participants."],
+      ["Is CARTHE only for real estate professionals?",
+       "No. Although real estate is one of the three major sectors, CARTHE also focuses significantly on tourism, hospitality, investment, business development, finance, technology, entrepreneurship and international partnerships."],
+      ["Do I have to be an investor to attend?",
+       "No. Participants may attend for professional development, business expansion, international exposure, networking, partnerships, market access or investment opportunities."],
+      ["Is CARTHE a conference?",
+       "CARTHE is broader than a conventional conference. It is structured as a business and economic exchange combining professional learning, industry exposure, business networking, B2B matchmaking, investment engagement, certificate courses, market immersion, partnership development and post-event follow-up."],
+      ["Will CARTHE continue supporting participants after the programme?",
+       "Yes. Post-CARTHE activities may include B2B follow-up, partnership tracking, contact and participant directories, documentation follow-up, deal progression, 30/60/90-day action tracking, and continued institutional and business engagement."],
+      ["What is the guiding philosophy of CARTHE 2027?",
+       "CARTHE 2027 is designed around the belief that international business opportunities are created through Knowledge + Relationships + Exposure + Credibility + Strategic Connections. Its core message is: Your Next International Business Opportunity May Begin With One Connection."],
+    ],
+  },
+  {
+    title: "How to take part",
+    items: [
+      ["How can I participate in CARTHE 2027?",
+       "Prospective participants will be required to complete the CARTHE registration process, select their preferred accommodation and certificate-course option, pay the applicable deposit, submit required participant and travel information, commence the visa/travel process where applicable, complete business/project profiling where relevant, pay the outstanding balance once visa and travel clearance are secured, and participate fully in the physical or applicable virtual programme."],
+      ["Where can I get more information?",
+       "For enquiries, registration and partnership information, prospective participants should contact the official CARTHE organising team through the designated CARTHE communication channels."],
+    ],
+  },
 ];
 
 export default function Home() {
@@ -669,11 +782,16 @@ export default function Home() {
             <h2 className="h-section">Before you register.</h2>
           </Reveal>
 
-          {FAQS.map(([q, a]) => (
-            <details className="faq-item" key={q}>
-              <summary>{q}</summary>
-              <p>{a}</p>
-            </details>
+          {FAQ_GROUPS.map((g) => (
+            <div className="faq-group" key={g.title}>
+              <h3 className="faq-group-title">{g.title}</h3>
+              {g.items.map(([q, a]) => (
+                <details className="faq-item" key={q}>
+                  <summary>{q}</summary>
+                  <p>{a}</p>
+                </details>
+              ))}
+            </div>
           ))}
 
           <div className="final-inline">
