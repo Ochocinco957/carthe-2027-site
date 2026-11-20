@@ -28,74 +28,106 @@ const ROOM = [
     copy: "Canadian firms, institutional partners and facilitators positioned to collaborate and transact." },
 ];
 
-/* Official eight-day schedule as supplied by the organisers. */
+/* Official eight-day programme — CARTHE_2027_One_Page_Programme_of_Event.docx */
 const PROGRAMME = [
   {
     day: "Day 1",
     date: "Thu 3 June",
-    item: "Arrival & Welcome",
+    item: "Arrival, Welcome & Orientation",
     items: [
-      "Meet and greet",
-      "Canada–Africa cultural performance",
-      "Organisers' welcome address",
-      "Introduction of delegates",
-      "Distribution of information booklets",
+      "Airport reception & transfers",
+      "Hotel check-in",
+      "Registration",
+      "Delegate orientation",
+      "Official welcome",
+      "Meet the Delegation networking",
+      "Welcome dinner",
     ],
   },
   {
     day: "Day 2",
     date: "Fri 4 June",
-    item: "Capacity Development & Networking",
+    item: "Capacity Development & Canada Business Exposure",
     items: [
-      "Capacity development training session",
-      "Business networking",
-      "Evening outing",
+      "Doing Business in Canada",
+      "Technology transfer",
+      "Canadian case studies",
+      "Cross-border project finance",
+      "Sector roundtables",
+      "Structured networking",
+      "Business networking dinner",
     ],
   },
   {
     day: "Day 3",
     date: "Sat 5 June",
-    item: "Downtown Toronto & Entertainment",
+    item: "Real Estate Certificate & Sector Experience",
     items: [
-      "Shopping and sightseeing — Downtown Toronto",
-      "Music and entertainment",
+      "One-day Certificate Course: Real Estate Risk Management and International Investment",
+      "Parallel tourism/hospitality/business exposure for non-course delegates",
     ],
   },
   {
     day: "Day 4",
     date: "Sun 6 June",
-    item: "Free Morning & Sightseeing",
+    item: "Tourism, Hospitality & Blue Economy",
     items: [
-      "Morning free until 12 noon",
-      "Sightseeing from 1:00 pm prompt",
+      "One-day Certificate Course: Tourism, Hospitality and Blue Economy",
+      "Parallel real-estate/market immersion and business activities for non-course delegates",
     ],
   },
   {
     day: "Day 5",
     date: "Mon 7 June",
-    item: "Training & Business Networking",
-    items: ["Capacity development training", "Business networking"],
+    item: "Advanced Capacity & Business Matchmaking",
+    items: [
+      "Structuring international partnerships",
+      "Investment readiness",
+      "Africa Opportunity Clinic",
+      "Cross-border negotiation",
+      "Credibility building",
+      "B2B Matchmaking Round 1",
+    ],
   },
   {
     day: "Day 6",
     date: "Tue 8 June",
-    item: "Investment & Partnership Dialogue",
-    items: ["Canada–Africa Investment and Partnership Dialogue"],
+    item: "Canada–Africa Investment & Partnership Dialogue",
+    items: [
+      "Institutional dialogue",
+      "Project finance",
+      "Canadian technology & solutions showcase",
+      "Africa Project Showcase",
+      "Investment panels",
+      "Deal Rooms / B2B Round 2",
+      "Expressions of Interest",
+    ],
   },
   {
     day: "Day 7",
     date: "Wed 9 June",
-    item: "Dialogue & Gala Night",
+    item: "Deal Progression, Partnerships & Gala",
     items: [
-      "Canada–Africa Investment and Partnership Dialogue",
-      "Gala night",
+      "B2B / Deal Rooms Round 3",
+      "Partnership discussions",
+      "Documentation Clinic (EOI/LOI/MoU)",
+      "30/60/90-day action plans",
+      "Closing session",
+      "Recognition & Gala",
     ],
   },
   {
     day: "Day 8",
     date: "Thu 10 June",
-    item: "Departure",
-    items: ["Departure"],
+    item: "Departure & Post-CARTHE Follow-Up",
+    items: [
+      "Hotel check-out",
+      "Airport transfers",
+      "Departure support",
+      "Participant directory/materials",
+      "B2B follow-up",
+      "Partnership and outcomes tracking",
+    ],
   },
 ];
 
@@ -249,7 +281,7 @@ const FAQS = [
   ["What are the benefits and transformation I'll experience?",
    "Direct relationships with Canadian counterparts and facilitators, exposure to building and construction technology you can deploy at home, a working understanding of cross-border project finance pathways, applicable skills from the training sessions, and pre-arranged partner meetings designed to become real commitments."],
   ["What are the side attractions that make the event memorable?",
-   "Beyond the business sessions, the week includes shopping and sightseeing in Downtown Toronto, an evening outing, a sightseeing afternoon and a closing gala night — the informal side of the trip where many of the strongest partnerships actually begin."],
+   "Beyond the business sessions, the week includes the Meet the Delegation networking and welcome dinner on Day 1, a business networking dinner on Day 2, parallel sector experiences alongside the certificate courses on Days 3 and 4, and the Recognition & Gala on Day 7 — the informal side of the trip where many of the strongest partnerships actually begin."],
   ["What categories of attendance are available?",
    "Three. Delegate — full in-person attendance across the eight days. Exhibitor — present your firm, technology or project to the room, with priority access to structured meetings. Virtual Attendee — join selected sessions remotely and receive delegate communications."],
   ["Will a certificate be issued for my participation?",
@@ -599,6 +631,7 @@ export default function Home() {
             <h2 className="h-section">
               Eight days of business and the evenings in-between.
             </h2>
+            <p className="section-strapline">LEARN &middot; CONNECT &middot; EXPLORE &middot; PARTNER &middot; INVEST</p>
           </Reveal>
 
           <div className="agenda-list">
@@ -620,8 +653,10 @@ export default function Home() {
             ))}
           </div>
           <p className="small-copy" style={{ marginTop: 18 }}>
-            Tap any day to see what it holds. Session times and venues are confirmed with
-            delegates ahead of the event.
+            Tap any day to see what it holds. Programme sequence and speakers/partners may be
+            refined as institutional collaborations are confirmed. Controlled virtual
+            participation will be available for registered participants affected by visa
+            outcomes.
           </p>
         </div>
       </section>
