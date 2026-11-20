@@ -2465,67 +2465,6 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================
-   Official CARTHE Catalog — track price list + Track 5 feature
-   ========================================================== */
-.track-list { border-top: 1px solid var(--hairline); margin-bottom: 40px; }
-.track-row {
-  display: grid; grid-template-columns: 90px 1fr auto; align-items: center;
-  gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--hairline);
-}
-.track-num {
-  font-family: var(--font-display); font-size: 12px; font-weight: 700;
-  letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-light);
-}
-.track-name { font-family: var(--font-display); font-size: 18px; font-weight: 600; }
-.track-price { font-family: var(--font-display); font-size: 16px; font-weight: 600; white-space: nowrap; }
-.track-new {
-  display: inline-block; margin-left: 10px; padding: 2px 9px; border-radius: 999px;
-  background: var(--red); color: #fff; font-size: 10px; font-weight: 700;
-  letter-spacing: 0.08em; text-transform: uppercase; vertical-align: middle;
-}
-.track-feature {
-  padding: 36px; border: 1px solid var(--hairline); border-radius: 20px; background: var(--surface-2);
-}
-.track-feature-title {
-  font-family: var(--font-display); font-size: 32px; font-weight: 700;
-  letter-spacing: -0.01em; line-height: 1.15; margin: 12px 0 22px;
-}
-.track-tiers { display: flex; gap: 12px; margin-bottom: 22px; }
-.track-tier { flex: 1 1 0; padding: 16px 18px; border: 1px solid var(--outline); border-radius: 14px; }
-.track-tier strong { display: block; font-family: var(--font-display); font-size: 24px; font-weight: 700; }
-.track-tier span { font-size: 13px; color: var(--muted); }
-.track-tier.is-premium { border-color: var(--red); }
-.track-label {
-  font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--red-light); margin: 24px 0 10px;
-}
-.track-includes {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px;
-}
-.track-includes li { position: relative; padding-left: 16px; font-size: 15px; color: var(--muted); }
-.track-includes li::before {
-  content: ""; position: absolute; left: 0; top: 9px;
-  width: 5px; height: 5px; border-radius: 50%; background: var(--red);
-}
-.track-meta { margin: 22px 0 24px; font-size: 14px; font-weight: 600; color: var(--warm-white); }
-
-@media (max-width: 767px) {
-  .track-row { grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px 0; }
-  .track-num { grid-column: 1 / -1; font-size: 11px; }
-  .track-name { font-size: 16px; }
-  .track-price { font-size: 14px; }
-  .track-list { margin-bottom: 28px; }
-  .track-feature { padding: 22px 18px; border-radius: 16px; }
-  .track-feature-title { font-size: 24px; margin: 10px 0 18px; }
-  .track-tier { padding: 12px 14px; }
-  .track-tier strong { font-size: 19px; }
-  .track-includes { grid-template-columns: 1fr; }
-  .track-includes li { font-size: 14px; }
-  .track-feature .btn { width: 100%; justify-content: center; }
-}
-
-/* ==========================================================
    Participation & packages
    ========================================================== */
 .pkg-hero {

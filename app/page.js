@@ -102,30 +102,6 @@ const PROGRAMME = [
 
 
 
-/* ============================================================
-   ORGANIZERS
-   Photos: public/organizers/1.jpg – 9.jpg, in this order.
-   Bios are kept to ~3 lines and collapsed behind a tap so nine
-   profiles do not add three screens of scroll.
-   ============================================================ */
-/* Official CARTHE catalog — all courses 1-2 days. Prices in USD. */
-const TRACKS = [
-  { n: 1, name: "Real Estate", price: "$2,567" },
-  { n: 2, name: "Tourism & Hospitality", price: "$2,567" },
-  { n: 3, name: "Entrepreneurship", price: "$1,604" },
-  { n: 4, name: "Legal Tourism", price: "$3,209" },
-  { n: 5, name: "Niagara Blue Economy", price: "$1,350", isNew: true },
-];
-
-const TRACK5_INCLUDES = [
-  "Hornblower boat cruise",
-  "Behind the Falls",
-  "Power Station tour",
-  "Niagara Tourism Board masterclass",
-  "CARTHE Blue Economy Blueprint Workshop",
-];
-
-
 /* Participation package — from CARTHE_2027_Prospect_Pricing_Package_Information.docx */
 const PACKAGE_INCLUDES = [
   ["Registration & programme access", [
@@ -208,6 +184,12 @@ const PARTNERS = [
   { name: "Meg Dowell Travel and Tour Agency", img: "/partners/meg-dowell.jpg", alt: "Meg Dowell Travel and Tour Agency logo" },
 ];
 
+/* ============================================================
+   ORGANIZERS
+   Photos: public/organizers/1.jpg – 9.jpg, in this order.
+   Bios are kept to ~3 lines and collapsed behind a tap so nine
+   profiles do not add three screens of scroll.
+   ============================================================ */
 const ORGANIZERS = [
   {
     img: "/organizers/1.jpg",
@@ -560,70 +542,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4b. OFFICIAL CARTHE CATALOG */}
-      <section className="section" id="catalog">
-        <div className="wrap">
-          <Reveal className="section-head">
-            <span className="eyebrow">Official CARTHE Catalog &middot; Add-on courses</span>
-            <h2 className="h-section">Five tracks. Every course 1&ndash;2 days.</h2>
-          </Reveal>
-
-          <div className="track-list">
-            {TRACKS.map((t) => (
-              <div className={`track-row ${t.isNew ? "is-new" : ""}`} key={t.n}>
-                <span className="track-num">Track {t.n}</span>
-                <span className="track-name">
-                  {t.name}
-                  {t.isNew ? <span className="track-new">New</span> : null}
-                </span>
-                <span className="track-price">{t.price} USD</span>
-              </div>
-            ))}
-          </div>
-
-          <Reveal className="track-feature">
-            <span className="eyebrow">Track 5 &middot; Newly added</span>
-            <h3 className="track-feature-title">Niagara Falls &times; Nigeria Blue Economy</h3>
-
-            <div className="track-tiers">
-              <div className="track-tier is-premium">
-                <strong>$1,350 USD</strong>
-                <span>Premium Overnight</span>
-              </div>
-            </div>
-
-            <p className="body-copy">
-              See how Canada turns 700,000 gallons per second into $2.4B a year and
-              40,000 jobs. Learn to copy the model for Nigeria&rsquo;s 853km coastline,
-              waterfalls and inland waterways.
-            </p>
-
-            <h4 className="track-label">Includes</h4>
-            <ul className="track-includes">
-              {TRACK5_INCLUDES.map((x) => (
-                <li key={x}>{x}</li>
-              ))}
-            </ul>
-
-            <h4 className="track-label">Why it matters</h4>
-            <p className="body-copy">
-              Nigeria&rsquo;s new Marine &amp; Blue Economy Ministry needs this model. You
-              become the investor who turns Badagry, Bar Beach, Ikogosi and Erin-Ijesha
-              into Nigeria&rsquo;s own Niagara.
-            </p>
-
-            <p className="track-meta">
-              1&ndash;2 days &middot; Toronto to Niagara Falls &middot; CARTHE Blue Economy
-              Ambassador Certificate
-            </p>
-
-            <a href="#register" className="btn btn-primary">
-              Reserve Your Place <span className="arrow">&rarr;</span>
-            </a>
-          </Reveal>
-        </div>
-      </section>
-
       {/* 6b. THE ORGANIZERS */}
       <section className="section" id="organizers">
         <div className="wrap">
@@ -908,7 +826,6 @@ export default function Home() {
               </p>
             </div>
             <div className="footer-links">
-              <a href="#catalog">Catalog</a>
               <a href="#organizers">Organizers / Partners</a>
               <a href="#programme">Programme</a>
               <a href="#faqs">FAQs</a>
