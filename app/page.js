@@ -324,9 +324,6 @@ export default function Home() {
         <div className="hero-grid-lines" />
         <div className="wrap">
           <div className="hero-content">
-            <div className="brand-logo brand-logo-hero">
-              <img src="/logo.jpg" alt="C.A.R.T.H.E. — Canada-Africa Real Estate, Tourism & Hospitality Exchange" width="1170" height="806" />
-            </div>
             <span className="eyebrow hero-eyebrow">Brampton, Canada &middot; 3&ndash;10 June 2027</span>
             <h1 className="h-hero hero-headline">
               Canada&ndash;Africa Real Estate, Tourism &amp; Hospitality Exchange
@@ -851,9 +848,6 @@ export default function Home() {
         <div className="wrap">
           <div className="footer-top">
             <div>
-              <div className="brand-logo brand-logo-footer">
-                <img src="/logo.jpg" alt="C.A.R.T.H.E. logo" width="1170" height="806" loading="lazy" />
-              </div>
               <div className="nav-logo" style={{ marginBottom: 10 }}>
                 CARTHE 2027
               </div>
